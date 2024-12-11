@@ -27,4 +27,8 @@ hub:
           value: "jupyter-x-"
         - name: CULL_THRESHOLD_SECONDS
           value: "3600"
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
 ```
