@@ -32,3 +32,8 @@ hub:
         runAsUser: 1000
         runAsGroup: 1000
 ```
+
+## Local testing
+To test out the functionality you can create the manifests found in k8s-manifests/tests.  
+You need to apply the RBAC manifests beforehand, so the culler has the necessary permissions to delete pods.  
+In the jupyterhub case from above it uses the hub-SA which is why we dont need to specify it there.  

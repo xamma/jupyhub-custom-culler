@@ -6,6 +6,7 @@ metadata:
   name: devpod
   namespace: culldemo01
 spec:
+  serviceAccountName: culler-sa
   containers:
   - command:
     - sleep
@@ -21,3 +22,4 @@ spec:
       - name: CULL_THRESHOLD_SECONDS
         value: "60"
   restartPolicy: Never
+  
