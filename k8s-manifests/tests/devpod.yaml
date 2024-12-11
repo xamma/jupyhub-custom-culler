@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: devpod
+  name: devpod
+  namespace: culldemo01
+spec:
+  containers:
+  - command:
+    - sleep
+    - infinity
+    image: python:3.11
+    name: devpod
+    resources: {}
+    env:
+      - name: POD_PREFIX
+        value: jupyter-x
+      - name: POD_NAMESPACE
+        value: culldemo01
+      - name: CULL_THRESHOLD_SECONDS
+        value: "60"
+  restartPolicy: Never
